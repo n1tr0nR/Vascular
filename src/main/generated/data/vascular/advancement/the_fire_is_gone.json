@@ -1,0 +1,42 @@
+{
+  "parent": "vascular:into_the_fire",
+  "criteria": {
+    "used_syringe": {
+      "conditions": {
+        "killing_blow": {
+          "tags": [
+            {
+              "expected": true,
+              "id": "vascular:syringe"
+            }
+          ]
+        }
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "red",
+      "translate": "advancements.vascular.the_fire_is_gone.description"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "components": {
+        "minecraft:item_model": "vascular:syringe_blood"
+      },
+      "count": 1,
+      "id": "vascular:syringe"
+    },
+    "title": {
+      "translate": "advancements.vascular.the_fire_is_gone.title"
+    }
+  },
+  "requirements": [
+    [
+      "used_syringe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

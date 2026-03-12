@@ -1,0 +1,44 @@
+{
+  "parent": "vascular:the_world_looks_white",
+  "criteria": {
+    "used_syringe": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:player"
+            }
+          }
+        ],
+        "item": {
+          "items": "vascular:syringe"
+        }
+      },
+      "trigger": "minecraft:player_interacted_with_entity"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "red",
+      "translate": "advancements.vascular.into_the_fire.description"
+    },
+    "icon": {
+      "components": {
+        "minecraft:item_model": "vascular:syringe_blood"
+      },
+      "count": 1,
+      "id": "vascular:syringe"
+    },
+    "title": {
+      "translate": "advancements.vascular.into_the_fire.title"
+    }
+  },
+  "requirements": [
+    [
+      "used_syringe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

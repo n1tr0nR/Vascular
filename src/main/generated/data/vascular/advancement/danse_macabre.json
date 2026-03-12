@@ -1,0 +1,35 @@
+{
+  "parent": "vascular:the_world_looks_red",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "vascular:ichor"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "gold",
+      "translate": "advancements.vascular.danse_macabre.description"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "vascular:ichor"
+    },
+    "title": {
+      "translate": "advancements.vascular.danse_macabre.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

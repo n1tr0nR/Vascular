@@ -1,0 +1,35 @@
+{
+  "parent": "vascular:requiem",
+  "criteria": {
+    "in_code": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "red",
+      "translate": "advancements.vascular.divine_intervention.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "components": {
+        "minecraft:item_model": "vascular:blood_bag_ichor",
+        "vascular:blood_bag": {
+          "type": "vascular:ichor",
+          "amount": 8
+        }
+      },
+      "count": 1,
+      "id": "vascular:blood_bag"
+    },
+    "title": {
+      "translate": "advancements.vascular.divine_intervention.title"
+    }
+  },
+  "requirements": [
+    [
+      "in_code"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,55 @@
+{
+  "advancements.vascular.the_world_looks_white.title": "The World Looks White",
+  "advancements.vascular.the_world_looks_white.description": "Blood, Guts and Glory.",
+  "advancements.vascular.the_world_looks_red.title": "The World Looks Red",
+  "advancements.vascular.the_world_looks_red.description": "Bleed and obtain some of your blood.",
+  "advancements.vascular.danse_macabre.title": "Danse Macabre",
+  "advancements.vascular.danse_macabre.description": "Obtain blood tainted with the Gods.",
+  "advancements.vascular.order.title": "Order",
+  "advancements.vascular.order.description": "Hold a blighted item of pure chaos.",
+  "advancements.vascular.into_the_fire.title": "Into the Fire",
+  "advancements.vascular.into_the_fire.description": "Obtain another Player's blood using a Syringe.",
+  "advancements.vascular.the_fire_is_gone.title": "The Fire is Gone",
+  "advancements.vascular.the_fire_is_gone.description": "Force a Player to bleed out.",
+  "advancements.vascular.requiem.title": "Requiem",
+  "advancements.vascular.requiem.description": "Drink some Blood.",
+  "advancements.vascular.divine_intervention.title": "Divine Intervention",
+  "advancements.vascular.divine_intervention.description": "Drink blood of the gods and cure any issues.",
+
+  "itemGroup.vascular": "Vascular",
+
+  "effect.vascular.bleeding": "Bleeding",
+  "effect.duration.bleeding": "Requires Donation",
+
+  "item.vascular.blood": "Blood",
+  "item.vascular.ichor": "Ichor",
+  "item.vascular.rot": "Σαπίλα",
+  "item.vascular.syringe": "Syringe",
+  "item.syringe.tooltip.blood": "Blood Type",
+  "item.syringe.tooltip.target": "Patient",
+  "item.vascular.blood_bag": "Blood Bag",
+
+  "block.vascular.blood_block": "Blood Block",
+  "block.vascular.gut_block": "Gut Block",
+  "block.vascular.golden_blood_block": "Golden Blood Block",
+  "block.vascular.golden_gut_block": "Golden Gut Block",
+
+  "death.attack.bled_out": "%1$s bled out",
+  "death.attack.bled_out.player": "%1$s bled out thanks to %2$s",
+
+  "subtitles.vascular.item.bag_create": "Blood bag crafts",
+  "subtitles.vascular.item.syringe_use": "Syringe stabs",
+  "subtitles.vascular.item.blood_drink": "Blood sips",
+
+  "blood.vascular.human": "Blood (Mixed)",
+  "blood.vascular.human.ap": "A+",
+  "blood.vascular.human.an": "A-",
+  "blood.vascular.human.bp": "B+",
+  "blood.vascular.human.bn": "B-",
+  "blood.vascular.human.abp": "AB+",
+  "blood.vascular.human.abn": "AB-",
+  "blood.vascular.human.op": "O+",
+  "blood.vascular.human.on": "O-",
+  "blood.vascular.rot": "Σαπίλα (Mixed)",
+  "blood.vascular.ichor": "Ichor (Mixed)"
+}

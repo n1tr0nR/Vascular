@@ -1,0 +1,23 @@
+{
+  "item.bag_create": {
+    "subtitle": "subtitles.vascular.item.bag_create",
+    "sounds": [
+      "vascular:item/bag_create"
+    ]
+  },
+  "item.syringe_use": {
+    "subtitle": "subtitles.vascular.item.syringe_use",
+    "sounds": [
+      "vascular:item/syringe_use"
+    ]
+  },
+  "item.blood_drink": {
+    "subtitle": "subtitles.vascular.item.blood_drink",
+    "sounds": [
+      "vascular:item/blood_drink0",
+      "vascular:item/blood_drink1",
+      "vascular:item/blood_drink2",
+      "vascular:item/blood_drink3"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "vascular",
+	"version": "${version}",
+	"name": "Vascular",
+	"description": "Blood...",
+	"authors": [
+		"Nitron"
+	],
+	"license": "ARR",
+	"icon": "assets/vascular/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.rbn.vascular.Vascular"
+		],
+		"client": [
+			"dev.rbn.vascular.client.VascularClient"
+		],
+		"fabric-datagen": [
+			"dev.rbn.vascular.VascularDataGenerator"
+		]
+	},
+	"mixins": [
+		"vascular.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

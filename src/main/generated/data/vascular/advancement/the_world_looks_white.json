@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "vascular:gui/advancements/backgrounds/guts",
+    "description": {
+      "color": "red",
+      "translate": "advancements.vascular.the_world_looks_white.description"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "vascular:blood"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.vascular.the_world_looks_white.title"
+    }
+  },
+  "requirements": [
+    [
+      "tick"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

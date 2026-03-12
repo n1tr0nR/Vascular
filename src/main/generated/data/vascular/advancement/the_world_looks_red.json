@@ -1,0 +1,34 @@
+{
+  "parent": "vascular:the_world_looks_white",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "vascular:blood"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "red",
+      "translate": "advancements.vascular.the_world_looks_red.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "vascular:blood"
+    },
+    "title": {
+      "translate": "advancements.vascular.the_world_looks_red.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

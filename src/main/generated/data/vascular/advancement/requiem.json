@@ -1,0 +1,33 @@
+{
+  "parent": "vascular:into_the_fire",
+  "criteria": {
+    "drunk_bag": {
+      "conditions": {
+        "item": {
+          "items": "vascular:blood_bag"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "red",
+      "translate": "advancements.vascular.requiem.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "vascular:blood_bag"
+    },
+    "title": {
+      "translate": "advancements.vascular.requiem.title"
+    }
+  },
+  "requirements": [
+    [
+      "drunk_bag"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

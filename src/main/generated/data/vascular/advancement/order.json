@@ -1,0 +1,36 @@
+{
+  "parent": "vascular:danse_macabre",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "vascular:rot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "dark_purple",
+      "translate": "advancements.vascular.order.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "vascular:rot"
+    },
+    "title": {
+      "translate": "advancements.vascular.order.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
