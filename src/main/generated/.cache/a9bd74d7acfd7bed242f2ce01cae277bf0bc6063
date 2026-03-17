@@ -6,10 +6,12 @@
 84d6be11188e592c523ca97374e389bc7bad2fe9 assets/vascular/items/blood.json
 f2e62b517983ecbec2fa7112c8680fc0bb43c921 assets/vascular/items/blood_bag.json
 49e0a40e919b96d82b74d06edf4c08af5fd1c1cd assets/vascular/items/blood_block.json
+f6b825beb944c5e920e707212c64016ebaab3788 assets/vascular/items/cassette.json
 618359fb93e6a269a754f1fda328f7babc4eff51 assets/vascular/items/golden_blood_block.json
 b381bdb8ab4e1735893cce75d15f4530c7103d8a assets/vascular/items/golden_gut_block.json
 bf27d39a551840e17c39d286df2b5d05c306e9ef assets/vascular/items/gut_block.json
 b865eae7fac76f96e484168a5e59fae903fe8735 assets/vascular/items/ichor.json
+d5d6e18c836b699f2207964d6682e43f668d38c4 assets/vascular/items/patient_card.json
 e182e52682f0ce3f6cbf04a61655e7598e6773a8 assets/vascular/items/rot.json
 48e5ea8ab6be54bb2c4be2c1e8e045c058500f10 assets/vascular/items/syringe.json
 134cdea7448c47c89e938e16eaab1e465d8c7c34 assets/vascular/models/block/blood_block.json
@@ -20,7 +22,10 @@ a7f190185d593e45d8b937490173dac9e5157fb9 assets/vascular/models/item/blood.json
 fa687a6264217cbdab2ffc8f877622e12f2539be assets/vascular/models/item/blood_bag.json
 b2bb89b2621c0be677a8a9ec9096686706feebed assets/vascular/models/item/blood_bag_ichor.json
 3fde3f28f49cb19046ffa5d5eb6c81876e8ec9f0 assets/vascular/models/item/blood_bag_rot.json
+ddd4dfdbd311d6fbc952a9a867c763c8977b25d5 assets/vascular/models/item/cassette.json
 4d3d9feb7a6a4e380887d5c41dd0a944c7f1964b assets/vascular/models/item/ichor.json
+b2ed6c7b34b96c6666b31d1260c718f2e672ee11 assets/vascular/models/item/patient_card.json
+4f2f25e0faeba0217e437e8d1d28f65697d49d17 assets/vascular/models/item/patient_card_bound.json
 7cad973b6ae14ea688bf88c404927e118c9c9198 assets/vascular/models/item/rot.json
 01992c344100cf7727c935aa89034ac565ff4cd0 assets/vascular/models/item/syringe.json
 02e92f1ab2f8311997eca5e4c78d516f4b9ed6f9 assets/vascular/models/item/syringe_blood.json

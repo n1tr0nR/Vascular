@@ -51,9 +51,7 @@ public class BloodBagItem extends Item {
         BloodBagComponent component = stack.get(ModDataComponents.BLOOD_BAG);
         if (component != null){
             String bloodType = component.type().getTranslationKey();
-            list.add(Text.translatable("item.syringe.tooltip.blood").formatted(Formatting.DARK_GRAY).append(": ").append(Text.translatable(bloodType).formatted(
-                    Formatting.GRAY
-            )));
+            list.add(Text.translatable("item.syringe.tooltip.blood").formatted(Formatting.DARK_GRAY).append(": ").append(Text.translatable(bloodType).withColor(component.type().getBloodColor())));
         }
     }
 

@@ -21,6 +21,7 @@
 			"dev.rbn.vascular.VascularDataGenerator"
 		]
 	},
+	"accessWidener": "vascular.accesswidener",
 	"mixins": [
 		"vascular.mixins.json"
 	],

@@ -1,7 +1,6 @@
 package dev.rbn.vascular.api.genes;
 
 import com.mojang.serialization.Codec;
-import dev.rbn.vascular.api.VascularBloodTypes;
 import dev.rbn.vascular.api.VascularGeneTypes;
 import dev.rbn.vascular.api.blood_types.BloodType;
 import dev.rbn.vascular.content.data.BloodBagComponent;
@@ -30,10 +29,12 @@ public abstract class Gene {
         return "gene." + getId().getNamespace() + "." + getId().getPath();
     }
 
-    public abstract void OnDrinkBlood(BloodType bloodType, PlayerEntity player, World world, BloodBagComponent bag);
+    public abstract void onDrinkBlood(BloodType bloodType, PlayerEntity player, World world, BloodBagComponent bag);
 
     public static final Codec<Gene> CODEC = Identifier.CODEC.xmap(
             VascularGeneTypes::get,
             Gene::getId
     );
+
+    public abstract int dangerLevel();
 }

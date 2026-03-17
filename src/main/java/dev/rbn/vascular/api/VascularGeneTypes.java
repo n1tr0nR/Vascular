@@ -5,6 +5,7 @@ import dev.rbn.vascular.api.blood_types.BloodType;
 import dev.rbn.vascular.api.genes.Gene;
 import dev.rbn.vascular.api.genes.set.BloodlustGene;
 import dev.rbn.vascular.api.genes.set.HumanGene;
+import dev.rbn.vascular.api.genes.set.RotGene;
 import net.minecraft.util.Identifier;
 
 import java.util.HashMap;
@@ -14,6 +15,7 @@ public class VascularGeneTypes {
 
     public static final Gene HUMAN = registerGeneType(Vascular.id("human"), new HumanGene());
     public static final Gene BLOODLUST = registerGeneType(Vascular.id("bloodlust"), new BloodlustGene());
+    public static final Gene ROT = registerGeneType(Vascular.id("rot"), new RotGene());
 
     public static Gene registerGeneType(Identifier id, Gene type){
         GENE_TYPES.put(id, type);

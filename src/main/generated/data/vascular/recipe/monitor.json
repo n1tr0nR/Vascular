@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "i": "minecraft:iron_ingot",
+    "l": "minecraft:redstone_lamp",
+    "n": "minecraft:note_block",
+    "r": "minecraft:redstone"
+  },
+  "pattern": [
+    "ill",
+    "ill",
+    "rnn"
+  ],
+  "result": {
+    "count": 1,
+    "id": "vascular:monitor"
+  }
+}

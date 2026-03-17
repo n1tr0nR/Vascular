@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "i": "minecraft:iron_ingot",
+    "n": "minecraft:iron_nugget"
+  },
+  "pattern": [
+    "ni",
+    "in"
+  ],
+  "result": {
+    "count": 1,
+    "id": "vascular:patient_card"
+  }
+}

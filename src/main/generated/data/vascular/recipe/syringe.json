@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "i": "minecraft:iron_ingot",
+    "n": "minecraft:iron_nugget"
+  },
+  "pattern": [
+    "n",
+    "i",
+    "i"
+  ],
+  "result": {
+    "count": 1,
+    "id": "vascular:syringe"
+  }
+}

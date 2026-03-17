@@ -4,7 +4,10 @@ import dev.rbn.vascular.api.BloodTypeEntityRegistry;
 import dev.rbn.vascular.api.GeneTypeEntityRegistry;
 import dev.rbn.vascular.api.VascularBloodTypes;
 import dev.rbn.vascular.api.VascularGeneTypes;
+import dev.rbn.vascular.api.monitor.VhsItem;
 import dev.rbn.vascular.content.item.BloodBagItem;
+import dev.rbn.vascular.content.item.CassetteItem;
+import dev.rbn.vascular.content.item.PatientCardItem;
 import dev.rbn.vascular.content.item.SyringeItem;
 import dev.rbn.vascular.init.*;
 import net.fabricmc.api.ModInitializer;
@@ -19,6 +22,8 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,6 +35,7 @@ public class Vascular implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger("Vascular");
 
 	public static ItemGroup GROUP;
+	public static ItemGroup SYRINGE_GROUP;
 
 	public static final RegistryKey<DamageType> BLED_OUT = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, id("bled_out"));
 	public static final TagKey<DamageType> SYRINGE = TagKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(MOD_ID, "syringe"));
@@ -44,10 +50,11 @@ public class Vascular implements ModInitializer {
 		ModEffects.init();
 		ModSounds.init();
 
+		GeneTypeEntityRegistry.addPlayerToGene(UUID.fromString("89d12ebd-6459-4f22-b319-3f45a013fcf6"), VascularGeneTypes.ROT);
 		GeneTypeEntityRegistry.addPlayerToGene(UUID.fromString("49c1c458-0503-48fb-a5bb-2c4eff2044b0"), VascularGeneTypes.BLOODLUST);
 
 		BloodTypeEntityRegistry.addPlayerToBloodType(UUID.fromString("89d12ebd-6459-4f22-b319-3f45a013fcf6"), VascularBloodTypes.ROT);
-		BloodTypeEntityRegistry.addPlayerToBloodType(UUID.fromString("a9bcfe9b-bb80-463d-848e-11e0b03f2b6e"), VascularBloodTypes.ICHOR);
+		BloodTypeEntityRegistry.addPlayerToBloodType(UUID.fromString("49c1c458-0503-48fb-a5bb-2c4eff2044b0"), VascularBloodTypes.PYRO);
 
 		ItemTooltipCallback.EVENT.register((itemStack, tooltipContext, tooltipType, list) -> {
 			if (itemStack.getItem() instanceof SyringeItem syringeItem){
@@ -55,6 +62,19 @@ public class Vascular implements ModInitializer {
 			}
 			if (itemStack.getItem() instanceof BloodBagItem bloodBagItem){
 				bloodBagItem.appendTooltip(itemStack, list);
+			}
+			if (itemStack.getItem() instanceof PatientCardItem bloodBagItem){
+				bloodBagItem.appendTooltip(itemStack, list);
+			}
+			if (itemStack.getItem() instanceof CassetteItem cassetteItem){
+				cassetteItem.appendTooltip(itemStack, list);
+			}
+
+
+
+			if (itemStack.getItem() instanceof VhsItem){
+				list.add(Text.literal("Can be inserted into a Monitor.")
+						.formatted(Formatting.DARK_GRAY));
 			}
 		});
 	}

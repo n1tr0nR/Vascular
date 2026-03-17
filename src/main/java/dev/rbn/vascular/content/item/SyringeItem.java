@@ -2,9 +2,12 @@ package dev.rbn.vascular.content.item;
 
 import dev.rbn.vascular.Vascular;
 import dev.rbn.vascular.api.BloodTypeEntityRegistry;
+import dev.rbn.vascular.api.GeneTypeEntityRegistry;
 import dev.rbn.vascular.api.blood_types.BloodType;
 import dev.rbn.vascular.api.blood_types.set.HumanBloodType;
+import dev.rbn.vascular.api.genes.Gene;
 import dev.rbn.vascular.content.data.BloodBagComponent;
+import dev.rbn.vascular.content.data.PatientCardComponent;
 import dev.rbn.vascular.content.data.SyringeComponent;
 import dev.rbn.vascular.init.ModDataComponents;
 import dev.rbn.vascular.init.ModEffects;
@@ -27,6 +30,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.ClickType;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
+import net.minecraft.world.World;
 
 import java.util.List;
 
@@ -36,8 +40,38 @@ public class SyringeItem extends Item {
     }
 
     @Override
+    public ActionResult use(World world, PlayerEntity user, Hand hand) {
+        ItemStack stack = user.getStackInHand(hand);
+
+        if (user.isSneaking()){
+            DamageSource source = user.getEntityWorld().getDamageSources().create(Vascular.BLED_OUT);
+            SyringeComponent component = stack.get(ModDataComponents.DNA);
+            boolean canTakeBlood = !user.hasStatusEffect(ModEffects.BLEEDING) && component == null;
+            boolean canDonateBlood = false;
+
+            if (canTakeBlood){
+                BloodType targetType = BloodTypeEntityRegistry.getPlayerBloodType(user.getUuid());
+                Gene targetGene = GeneTypeEntityRegistry.getPlayerGene(user.getUuid());
+                stack.set(ModDataComponents.DNA, new SyringeComponent(user.getUuidAsString(), user.getName(), targetType, targetGene));
+                stack.set(DataComponentTypes.ITEM_MODEL, targetType.getSyringeModel());
+                user.setStackInHand(hand, stack.copy());
+                if (user.getEntityWorld() instanceof ServerWorld serverWorld){
+                    user.damage(serverWorld, source, 2);
+                }
+                user.getEntityWorld().playSound(user, user.getBlockPos(), ModSounds.SYRINGE_USE.value(), SoundCategory.PLAYERS,
+                        1.0F, 0.9F + user.getRandom().nextFloat() * 0.2F);
+                if (user instanceof ServerPlayerEntity serverPlayerEntity && user.getHealth() <= 0.0F){
+                    Criteria.PLAYER_KILLED_ENTITY.trigger(serverPlayerEntity, user, source);
+                }
+                return ActionResult.CONSUME;
+            }
+        }
+        return super.use(world, user, hand);
+    }
+
+    @Override
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
-        if (user.getEntityWorld().isClient()) {
+        if (user.getEntityWorld().isClient() || user.isSneaking()) {
             return ActionResult.PASS;
         }
         DamageSource source = user.getEntityWorld().getDamageSources().create(Vascular.BLED_OUT);
@@ -49,7 +83,8 @@ public class SyringeItem extends Item {
 
             if (canTakeBlood){
                 BloodType targetType = BloodTypeEntityRegistry.getPlayerBloodType(target.getUuid());
-                stack.set(ModDataComponents.DNA, new SyringeComponent(target.getUuidAsString(), target.getName(), targetType));
+                Gene targetGene = GeneTypeEntityRegistry.getPlayerGene(target.getUuid());
+                stack.set(ModDataComponents.DNA, new SyringeComponent(target.getUuidAsString(), target.getName(), targetType, targetGene));
                 stack.set(DataComponentTypes.ITEM_MODEL, targetType.getSyringeModel());
                 user.setStackInHand(hand, stack.copy());
                 if (target.getEntityWorld() instanceof ServerWorld serverWorld){
@@ -86,9 +121,7 @@ public class SyringeItem extends Item {
             if (component.type() instanceof HumanBloodType human && !(component.uuid().isEmpty())){
                 bloodType = human.getBloodTypeTranslationKey(component.playerName().getString());
             }
-            list.add(Text.translatable("item.syringe.tooltip.blood").formatted(Formatting.DARK_GRAY).append(": ").append(Text.translatable(bloodType).formatted(
-                    Formatting.GRAY
-            )));
+            list.add(Text.translatable("item.syringe.tooltip.blood").formatted(Formatting.DARK_GRAY).append(": ").append(Text.translatable(bloodType).withColor(component.type().getBloodColor())));
             if (!component.uuid().isEmpty()){
                 list.add(Text.translatable("item.syringe.tooltip.target").formatted(Formatting.DARK_GRAY).append(": ").append(component.playerName().copy().formatted(Formatting.GRAY)));
             }
@@ -101,7 +134,7 @@ public class SyringeItem extends Item {
         SyringeComponent component = stack.get(ModDataComponents.DNA);
         if (slotStack.getItem().equals(Items.IRON_INGOT) && slotStack.getCount() == 1 && component != null){
             ItemStack bloodBag = ModItems.BLOOD_BAG.getDefaultStack();
-            bloodBag.set(ModDataComponents.BLOOD_BAG, new BloodBagComponent(component.type(), 1));
+            bloodBag.set(ModDataComponents.BLOOD_BAG, new BloodBagComponent(component.type(), component.gene(), 1));
             if (component.type().getBagModel() != null){
                 bloodBag.set(DataComponentTypes.ITEM_MODEL, component.type().getBagModel());
             }
@@ -117,7 +150,7 @@ public class SyringeItem extends Item {
             BloodBagComponent component1 = slotStack.get(ModDataComponents.BLOOD_BAG);
             if (component1 != null){
                 if (component1.canInsert(component.type())){
-                    BloodBagComponent newComp = new BloodBagComponent(component1.type(), component1.amount() + 1);
+                    BloodBagComponent newComp = new BloodBagComponent(component1.type(), component1.gene(), component1.amount() + 1);
                     ItemStack newStack = slotStack.copy();
                     newStack.set(ModDataComponents.BLOOD_BAG, newComp);
                     slot.setStack(newStack);
@@ -135,8 +168,8 @@ public class SyringeItem extends Item {
             BloodBagComponent component1 = slotStack.get(ModDataComponents.BLOOD_BAG);
             if (component1 != null){
                 int afterTake = component1.amount() - 1;
-                SyringeComponent newComp = new SyringeComponent("", Text.empty(), component1.type());
-                BloodBagComponent newBagComp = new BloodBagComponent(component1.type(), afterTake);
+                SyringeComponent newComp = new SyringeComponent("", Text.empty(), component1.type(), component1.gene());
+                BloodBagComponent newBagComp = new BloodBagComponent(component1.type(), component1.gene(), afterTake);
                 stack.set(ModDataComponents.DNA, newComp);
                 stack.set(DataComponentTypes.ITEM_MODEL, component1.type().getSyringeModel());
                 if (afterTake <= 0){
@@ -147,6 +180,22 @@ public class SyringeItem extends Item {
                 }
                 if (player.getEntityWorld().isClient()){
                     player.playSound(ModSounds.BAG_CREATE.value(), 1.0F, 1.5F + player.getRandom().nextFloat() * 0.2F);
+                }
+                return true;
+            }
+        } else if (slotStack.getItem() instanceof PatientCardItem){
+            PatientCardComponent component1 = slotStack.get(ModDataComponents.PATIENT_CARD);
+            if (component1 == null && component != null){
+                slotStack.set(ModDataComponents.PATIENT_CARD, new PatientCardComponent(
+                        component.gene(), component.type(), component.playerName()
+                ));
+                slotStack.set(DataComponentTypes.ITEM_MODEL, Vascular.id("patient_card_bound"));
+
+                slot.setStack(slotStack.copy());
+                stack.remove(ModDataComponents.DNA);
+                stack.set(DataComponentTypes.ITEM_MODEL, Vascular.id("syringe"));
+                if (player.getEntityWorld().isClient()){
+                    player.playSound(ModSounds.BAG_CREATE.value(), 1.0F, 0.9F + player.getRandom().nextFloat() * 0.2F);
                 }
                 return true;
             }

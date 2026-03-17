@@ -35,5 +35,10 @@ public class ModModels extends FabricModelProvider {
         generator.register(ModItems.BLOOD_BAG, Models.GENERATED);
         generator.registerSubModel(ModItems.BLOOD_BAG, "_ichor", Models.GENERATED);
         generator.registerSubModel(ModItems.BLOOD_BAG, "_rot", Models.GENERATED);
+
+        generator.register(ModItems.CASSETTE, Models.GENERATED);
+
+        generator.register(ModItems.PATIENT_CARD, Models.GENERATED);
+        generator.registerSubModel(ModItems.PATIENT_CARD, "_bound", Models.GENERATED);
     }
 }

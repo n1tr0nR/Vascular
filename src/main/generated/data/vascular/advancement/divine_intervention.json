@@ -16,7 +16,8 @@
         "minecraft:item_model": "vascular:blood_bag_ichor",
         "vascular:blood_bag": {
           "type": "vascular:ichor",
-          "amount": 8
+          "amount": 8,
+          "gene": "vascular:human"
         }
       },
       "count": 1,

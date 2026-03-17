@@ -19,5 +19,47 @@
       "vascular:item/blood_drink2",
       "vascular:item/blood_drink3"
     ]
+  },
+  "block.static": {
+    "subtitle": "subtitles.vascular.block.static",
+    "sounds": [
+      "vascular:block/static"
+    ]
+  },
+  "block.hum": {
+    "subtitle": "subtitles.vascular.block.hum",
+    "sounds": [
+      "vascular:block/hum"
+    ]
+  },
+  "block.monitor_power_off": {
+    "subtitle": "subtitles.vascular.block.monitor_power_off",
+    "sounds": [
+      "vascular:block/monitor_power_off"
+    ]
+  },
+  "block.vhs_add": {
+    "subtitle": "subtitles.vascular.block.vhs_add",
+    "sounds": [
+      "vascular:block/vhs_add"
+    ]
+  },
+  "block.vhs_remove": {
+    "subtitle": "subtitles.vascular.block.vhs_remove",
+    "sounds": [
+      "vascular:block/vhs_remove"
+    ]
+  },
+  "music.event_horizon": {
+    "subtitle": "subtitles.vascular.music.event_horizon",
+    "sounds": [
+      "vascular:music/event_horizon_monitor"
+    ]
+  },
+  "music.the_world_looks_red": {
+    "subtitle": "subtitles.vascular.music.the_world_looks_red",
+    "sounds": [
+      "vascular:music/the_world_looks_red_monitor"
+    ]
   }
 }

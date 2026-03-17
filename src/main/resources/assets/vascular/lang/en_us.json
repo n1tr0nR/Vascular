@@ -17,6 +17,7 @@
   "advancements.vascular.divine_intervention.description": "Drink blood of the gods and cure any issues.",
 
   "itemGroup.vascular": "Vascular",
+  "itemGroup.vascular.syringe": "Vascular Syringes",
 
   "effect.vascular.bleeding": "Bleeding",
   "effect.duration.bleeding": "Requires Donation",
@@ -27,12 +28,16 @@
   "item.vascular.syringe": "Syringe",
   "item.syringe.tooltip.blood": "Blood Type",
   "item.syringe.tooltip.target": "Patient",
+  "item.syringe.tooltip.gene": "Gene",
   "item.vascular.blood_bag": "Blood Bag",
+  "item.vascular.patient_card": "Patient Card",
+  "item.vascular.cassette": "Cassette",
 
   "block.vascular.blood_block": "Blood Block",
   "block.vascular.gut_block": "Gut Block",
   "block.vascular.golden_blood_block": "Golden Blood Block",
   "block.vascular.golden_gut_block": "Golden Gut Block",
+  "block.vascular.monitor": "Monitor",
 
   "death.attack.bled_out": "%1$s bled out",
   "death.attack.bled_out.player": "%1$s bled out thanks to %2$s",
@@ -40,6 +45,12 @@
   "subtitles.vascular.item.bag_create": "Blood bag crafts",
   "subtitles.vascular.item.syringe_use": "Syringe stabs",
   "subtitles.vascular.item.blood_drink": "Blood sips",
+
+  "gene.vascular.human": "Human",
+  "gene.vascular.bloodlust": "Bloodlust",
+  "gene.vascular.rot": "[UNKNOWN]",
+
+  "monitor.display.danger": "LVL",
 
   "blood.vascular.human": "Blood (Mixed)",
   "blood.vascular.human.ap": "A+",
@@ -50,6 +61,14 @@
   "blood.vascular.human.abn": "AB-",
   "blood.vascular.human.op": "O+",
   "blood.vascular.human.on": "O-",
-  "blood.vascular.rot": "Σαπίλα (Mixed)",
-  "blood.vascular.ichor": "Ichor (Mixed)"
+  "blood.vascular.rot": "Σαπίλα",
+  "blood.vascular.ichor": "Ichor",
+  "blood.vascular.pyro": "Pyro",
+
+  "sound.vascular.music.event_horizon.description": "Heaven Pierce Her - Event Horizon",
+  "sound.vascular.music.event_horizon.description.1": "Heaven Pierce Her",
+  "sound.vascular.music.event_horizon.description.2": "- Event Horizon",
+  "sound.vascular.music.the_world_looks_red.description": "Heaven Pierce Her - The World Looks Red",
+  "sound.vascular.music.the_world_looks_red.description.1": "Heaven Pierce Her",
+  "sound.vascular.music.the_world_looks_red.description.2": "- The World Looks Red"
 }
