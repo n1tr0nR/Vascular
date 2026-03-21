@@ -7,6 +7,9 @@
 	"authors": [
 		"Nitron"
 	],
+	"contributors": [
+		"ShivAngel (Art helps)"
+	],
 	"license": "ARR",
 	"icon": "assets/vascular/icon.png",
 	"environment": "*",
@@ -19,12 +22,20 @@
 		],
 		"fabric-datagen": [
 			"dev.rbn.vascular.VascularDataGenerator"
+		],
+		"cardinal-components": [
+			"dev.rbn.vascular.content.cca.ModCCA"
 		]
 	},
 	"accessWidener": "vascular.accesswidener",
 	"mixins": [
 		"vascular.mixins.json"
 	],
+	"custom": {
+		"cardinal-components": [
+			"vascular:obliteration_ray"
+		]
+	},
 	"depends": {
 		"fabricloader": ">=0.18.4",
 		"minecraft": "~1.21.11",

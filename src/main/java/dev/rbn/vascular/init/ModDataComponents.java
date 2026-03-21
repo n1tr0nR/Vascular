@@ -1,5 +1,6 @@
 package dev.rbn.vascular.init;
 
+import com.mojang.serialization.Codec;
 import dev.rbn.vascular.Vascular;
 import dev.rbn.vascular.content.data.BloodBagComponent;
 import dev.rbn.vascular.content.data.PatientCardComponent;
@@ -32,6 +33,12 @@ public interface ModDataComponents {
             Registries.DATA_COMPONENT_TYPE,
             Vascular.id("cassette"),
             ComponentType.<SoundEvent>builder().codec(SoundEvent.CODEC).build()
+    );
+
+    ComponentType<Boolean> EXPLODE = Registry.register(
+            Registries.DATA_COMPONENT_TYPE,
+            Vascular.id("explode"),
+            ComponentType.<Boolean>builder().codec(Codec.BOOL).build()
     );
 
     static void init(){}

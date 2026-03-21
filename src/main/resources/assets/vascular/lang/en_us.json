@@ -32,6 +32,7 @@
   "item.vascular.blood_bag": "Blood Bag",
   "item.vascular.patient_card": "Patient Card",
   "item.vascular.cassette": "Cassette",
+  "item.vascular.obliteration_ray": "Obliteration Ray",
 
   "block.vascular.blood_block": "Blood Block",
   "block.vascular.gut_block": "Gut Block",
@@ -70,5 +71,12 @@
   "sound.vascular.music.event_horizon.description.2": "- Event Horizon",
   "sound.vascular.music.the_world_looks_red.description": "Heaven Pierce Her - The World Looks Red",
   "sound.vascular.music.the_world_looks_red.description.1": "Heaven Pierce Her",
-  "sound.vascular.music.the_world_looks_red.description.2": "- The World Looks Red"
+  "sound.vascular.music.the_world_looks_red.description.2": "- The World Looks Red",
+  "sound.vascular.music.shopping_cart.description": "Shopping Cart",
+  "sound.vascular.music.shopping_cart.description.1": "Shopping Cart",
+  "sound.vascular.music.shopping_cart.description.2": "- This is aura!!",
+
+  "sound.minecraft.entity.villager.no.description": "Hmn",
+  "sound.minecraft.entity.villager.no.description.1": "Hmn",
+  "sound.minecraft.entity.villager.no.description.2": "Hmn"
 }

@@ -43,6 +43,9 @@ public class NitronFeaturesFeatureRenderer extends FeatureRenderer<PlayerEntityR
         this.model.Body.pitch = this.getContextModel().body.pitch;
         this.model.Body.visible = this.getContextModel().body.visible;
 
+        this.model.breasts.resetTransform();
+        this.model.breasts.originY = this.model.breasts.originY + 0.5F;
+
         this.model.RightLeg.setOrigin(this.getContextModel().rightLeg.originX, this.getContextModel().rightLeg.originY, this.getContextModel().rightLeg.originZ);
         this.model.RightLeg.yaw = this.getContextModel().rightLeg.yaw;
         this.model.RightLeg.pitch = this.getContextModel().rightLeg.pitch;
@@ -60,7 +63,8 @@ public class NitronFeaturesFeatureRenderer extends FeatureRenderer<PlayerEntityR
         this.model.breasts.visible = state.equippedChestStack.isEmpty();
         this.model.hood.visible = state.equippedChestStack.isEmpty();
 
-        queue.submitModel(this.model, state, matrices, RenderLayers.entityTranslucent(Vascular.id("textures/entity/nitron_features.png")), light, OverlayTexture.DEFAULT_UV, state.outlineColor, null);
+        queue.submitModel(this.model, state, matrices, RenderLayers.entityTranslucent(Vascular.id("textures/entity/nitron_features.png")), light,
+                state.hurt ? OverlayTexture.field_32953 : OverlayTexture.DEFAULT_UV, state.outlineColor, null);
 
         matrices.pop();
     }

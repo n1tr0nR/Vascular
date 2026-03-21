@@ -1,8 +1,8 @@
 package dev.rbn.vascular.content.item;
 
 import dev.rbn.vascular.Vascular;
-import dev.rbn.vascular.api.BloodTypeEntityRegistry;
-import dev.rbn.vascular.api.GeneTypeEntityRegistry;
+import dev.rbn.vascular.api.blood_types.BloodTypeEntityRegistry;
+import dev.rbn.vascular.api.genes.GeneTypeEntityRegistry;
 import dev.rbn.vascular.api.blood_types.BloodType;
 import dev.rbn.vascular.api.blood_types.set.HumanBloodType;
 import dev.rbn.vascular.api.genes.Gene;

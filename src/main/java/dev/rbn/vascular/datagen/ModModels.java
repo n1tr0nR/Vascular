@@ -4,9 +4,11 @@ import dev.rbn.vascular.init.ModBlocks;
 import dev.rbn.vascular.init.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.minecraft.block.Blocks;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
+import net.minecraft.util.DyeColor;
 
 public class ModModels extends FabricModelProvider {
     public ModModels(FabricDataOutput output) {
@@ -26,6 +28,8 @@ public class ModModels extends FabricModelProvider {
         generator.register(ModItems.BLOOD, Models.GENERATED);
         generator.register(ModItems.ICHOR, Models.GENERATED);
         generator.register(ModItems.ROT, Models.GENERATED);
+
+        generator.register(ModItems.BLOOD_KNIFE, Models.HANDHELD);
 
         generator.register(ModItems.SYRINGE, Models.GENERATED);
         generator.registerSubModel(ModItems.SYRINGE, "_blood", Models.GENERATED);

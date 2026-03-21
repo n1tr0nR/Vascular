@@ -12,6 +12,7 @@ public interface ModSounds {
     RegistryEntry<SoundEvent> BAG_CREATE = register("item.bag_create");
     RegistryEntry<SoundEvent> SYRINGE_USE = register("item.syringe_use");
     RegistryEntry<SoundEvent> BLOOD_DRINK = register("item.blood_drink");
+    RegistryEntry<SoundEvent> THROW_BLOOD = register("item.throw_blood");
 
     RegistryEntry<SoundEvent> STATIC = register("block.static");
     RegistryEntry<SoundEvent> HUM = register("block.hum");
@@ -21,6 +22,7 @@ public interface ModSounds {
 
     RegistryEntry<SoundEvent> EVENT_HORIZON = register("music.event_horizon");
     RegistryEntry<SoundEvent> THE_WORLD_LOOKS_RED = register("music.the_world_looks_red");
+    RegistryEntry<SoundEvent> SHOPPING_CART = register("music.shopping_cart");
 
     static void init() {}
 

@@ -20,6 +20,12 @@
       "vascular:item/blood_drink3"
     ]
   },
+  "item.throw_blood": {
+    "subtitle": "subtitles.vascular.item.throw_blood",
+    "sounds": [
+      "vascular:item/throw_blood"
+    ]
+  },
   "block.static": {
     "subtitle": "subtitles.vascular.block.static",
     "sounds": [
@@ -60,6 +66,12 @@
     "subtitle": "subtitles.vascular.music.the_world_looks_red",
     "sounds": [
       "vascular:music/the_world_looks_red_monitor"
+    ]
+  },
+  "music.shopping_cart": {
+    "subtitle": "subtitles.vascular.music.shopping_cart",
+    "sounds": [
+      "vascular:music/shopping_cart"
     ]
   }
 }

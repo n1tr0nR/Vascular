@@ -1,14 +1,11 @@
 package dev.rbn.vascular;
 
-import dev.rbn.vascular.api.BloodTypeEntityRegistry;
-import dev.rbn.vascular.api.GeneTypeEntityRegistry;
-import dev.rbn.vascular.api.VascularBloodTypes;
-import dev.rbn.vascular.api.VascularGeneTypes;
+import dev.rbn.vascular.api.blood_types.BloodTypeEntityRegistry;
+import dev.rbn.vascular.api.genes.GeneTypeEntityRegistry;
+import dev.rbn.vascular.init.VascularBloodTypes;
+import dev.rbn.vascular.init.VascularGeneTypes;
 import dev.rbn.vascular.api.monitor.VhsItem;
-import dev.rbn.vascular.content.item.BloodBagItem;
-import dev.rbn.vascular.content.item.CassetteItem;
-import dev.rbn.vascular.content.item.PatientCardItem;
-import dev.rbn.vascular.content.item.SyringeItem;
+import dev.rbn.vascular.content.item.*;
 import dev.rbn.vascular.init.*;
 import net.fabricmc.api.ModInitializer;
 
@@ -49,11 +46,10 @@ public class Vascular implements ModInitializer {
 		ModDataComponents.init();
 		ModEffects.init();
 		ModSounds.init();
+		ModEntities.init();
 
-		GeneTypeEntityRegistry.addPlayerToGene(UUID.fromString("89d12ebd-6459-4f22-b319-3f45a013fcf6"), VascularGeneTypes.ROT);
 		GeneTypeEntityRegistry.addPlayerToGene(UUID.fromString("49c1c458-0503-48fb-a5bb-2c4eff2044b0"), VascularGeneTypes.BLOODLUST);
 
-		BloodTypeEntityRegistry.addPlayerToBloodType(UUID.fromString("89d12ebd-6459-4f22-b319-3f45a013fcf6"), VascularBloodTypes.ROT);
 		BloodTypeEntityRegistry.addPlayerToBloodType(UUID.fromString("49c1c458-0503-48fb-a5bb-2c4eff2044b0"), VascularBloodTypes.PYRO);
 
 		ItemTooltipCallback.EVENT.register((itemStack, tooltipContext, tooltipType, list) -> {
@@ -69,8 +65,9 @@ public class Vascular implements ModInitializer {
 			if (itemStack.getItem() instanceof CassetteItem cassetteItem){
 				cassetteItem.appendTooltip(itemStack, list);
 			}
-
-
+			if (itemStack.getItem() instanceof ObliterationRayItem obliterationRayItem){
+				obliterationRayItem.appendTooltip(itemStack, list);
+			}
 
 			if (itemStack.getItem() instanceof VhsItem){
 				list.add(Text.literal("Can be inserted into a Monitor.")

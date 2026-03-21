@@ -1,7 +1,7 @@
 package dev.rbn.vascular.mixin;
 
-import dev.rbn.vascular.api.GeneTypeEntityRegistry;
-import dev.rbn.vascular.api.VascularGeneTypes;
+import dev.rbn.vascular.api.genes.GeneTypeEntityRegistry;
+import dev.rbn.vascular.init.VascularGeneTypes;
 import dev.rbn.vascular.client.VascularClient;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;

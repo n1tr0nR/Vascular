@@ -1,6 +1,6 @@
 package dev.rbn.vascular.mixin;
 
-import dev.rbn.vascular.api.BloodTypeEntityRegistry;
+import dev.rbn.vascular.api.blood_types.BloodTypeEntityRegistry;
 import net.minecraft.entity.*;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;

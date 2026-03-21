@@ -1,13 +1,11 @@
 package dev.rbn.vascular.init;
 
 import dev.rbn.vascular.Vascular;
+import dev.rbn.vascular.content.block.MedicalBedBlock;
 import dev.rbn.vascular.content.block.MonitorBlock;
 import dev.rbn.vascular.content.blockEntity.MonitorBlockEntity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.MultifaceBlock;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
@@ -17,6 +15,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
@@ -32,6 +31,8 @@ public interface ModBlocks {
             .sounds(BlockSoundGroup.HONEY), Block::new);
 
     Block MONITOR = registerBlockItem("monitor", AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).nonOpaque(), MonitorBlock::new);
+
+    Block MEDICAL_BED = registerBlockItem("medical_bed", AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).nonOpaque(), MedicalBedBlock::new);
 
     private static Block register(String name, AbstractBlock.Settings settings, Function<AbstractBlock.Settings, Block> factory){
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Vascular.id(name));

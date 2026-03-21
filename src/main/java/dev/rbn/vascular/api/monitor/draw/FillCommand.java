@@ -2,7 +2,6 @@ package dev.rbn.vascular.api.monitor.draw;
 
 import dev.rbn.vascular.Vascular;
 import dev.rbn.vascular.api.monitor.MonitorContext;
-import dev.rbn.vascular.api.monitor.MonitorDrawCommand;
 import dev.rbn.vascular.api.monitor.MonitorRenderContext;
 import dev.rbn.vascular.content.block.MonitorBlock;
 import net.minecraft.client.MinecraftClient;

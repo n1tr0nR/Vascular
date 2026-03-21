@@ -11,6 +11,7 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gl.RenderPipelines;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.render.RenderTickCounter;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
@@ -109,6 +110,22 @@ public class SyringeTooltipRenderer implements HudElement {
                     drawContext.getScaledWindowHeight() / 2 + 30,
                     16, 16
             );
+        }
+
+        if (VascularClient.bloodTaking.lastBloodThrown != null && client.world != null){
+            Entity entity = VascularClient.bloodTaking.lastBloodThrown;
+            Vector2i pos = UIHelper.worldToScreen(
+                    entity.getEntityPos()
+            );
+            if (pos != null){
+                drawContext.drawText(
+                        client.textRenderer,
+                        Text.literal("AA"),
+                        pos.x, pos.y,
+                        0xFFFFFFFF,
+                        true
+                );
+            }
         }
     }
 }

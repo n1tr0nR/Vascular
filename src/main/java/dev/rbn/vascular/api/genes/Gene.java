@@ -1,7 +1,7 @@
 package dev.rbn.vascular.api.genes;
 
 import com.mojang.serialization.Codec;
-import dev.rbn.vascular.api.VascularGeneTypes;
+import dev.rbn.vascular.init.VascularGeneTypes;
 import dev.rbn.vascular.api.blood_types.BloodType;
 import dev.rbn.vascular.content.data.BloodBagComponent;
 import net.minecraft.entity.player.PlayerEntity;

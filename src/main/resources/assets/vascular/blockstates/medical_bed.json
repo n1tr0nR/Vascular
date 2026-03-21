@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "facing=north,part=foot": { "model": "vascular:block/medical_bed_bottom", "y": 180 },
+    "facing=east,part=foot":  { "model": "vascular:block/medical_bed_bottom", "y": 270 },
+    "facing=south,part=foot": { "model": "vascular:block/medical_bed_bottom", "y": 0 },
+    "facing=west,part=foot":  { "model": "vascular:block/medical_bed_bottom", "y": 90 },
+
+    "facing=north,part=head": { "model": "vascular:block/medical_bed_top", "y": 180 },
+    "facing=east,part=head":  { "model": "vascular:block/medical_bed_top", "y": 270 },
+    "facing=south,part=head": { "model": "vascular:block/medical_bed_top", "y": 0 },
+    "facing=west,part=head":  { "model": "vascular:block/medical_bed_top", "y": 90 }
+  }
+}

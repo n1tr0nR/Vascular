@@ -2,9 +2,9 @@ package dev.rbn.vascular.api.blood_types;
 
 import com.mojang.serialization.Codec;
 import dev.rbn.vascular.Vascular;
-import dev.rbn.vascular.api.GeneTypeEntityRegistry;
-import dev.rbn.vascular.api.VascularBloodTypes;
-import dev.rbn.vascular.api.VascularGeneTypes;
+import dev.rbn.vascular.api.genes.GeneTypeEntityRegistry;
+import dev.rbn.vascular.init.VascularBloodTypes;
+import dev.rbn.vascular.init.VascularGeneTypes;
 import dev.rbn.vascular.content.data.BloodBagComponent;
 import dev.rbn.vascular.content.data.SyringeComponent;
 import dev.rbn.vascular.init.ModDataComponents;

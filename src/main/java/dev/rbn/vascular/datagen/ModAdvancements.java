@@ -1,7 +1,7 @@
 package dev.rbn.vascular.datagen;
 
 import dev.rbn.vascular.Vascular;
-import dev.rbn.vascular.api.VascularBloodTypes;
+import dev.rbn.vascular.init.VascularBloodTypes;
 import dev.rbn.vascular.init.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;

@@ -1,15 +1,9 @@
 package dev.rbn.vascular.init;
 
 import dev.rbn.vascular.Vascular;
-import dev.rbn.vascular.api.VascularBloodTypes;
-import dev.rbn.vascular.api.VascularGeneTypes;
 import dev.rbn.vascular.api.blood_types.BloodType;
-import dev.rbn.vascular.api.blood_types.set.HumanBloodType;
-import dev.rbn.vascular.content.data.PatientCardComponent;
-import dev.rbn.vascular.content.item.BloodBagItem;
-import dev.rbn.vascular.content.item.CassetteItem;
-import dev.rbn.vascular.content.item.PatientCardItem;
-import dev.rbn.vascular.content.item.SyringeItem;
+import dev.rbn.vascular.content.item.*;
+import dev.rbn.vascular.content.item.cassettes.ShoppingCardCassette;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.component.type.FoodComponent;
@@ -37,11 +31,16 @@ public interface ModItems {
     Item PATIENT_CARD = register("patient_card", PatientCardItem::new, new Item.Settings().maxCount(1));
 
     Item CASSETTE = register("cassette", CassetteItem::new, new Item.Settings().maxCount(1));
+    Item SHOPPING_CART = register("shopping_cart", ShoppingCardCassette::new, new Item.Settings().maxCount(1));
 
     Item BLOOD_BAG = register("blood_bag", BloodBagItem::new, new Item.Settings().maxCount(1).food(
             new FoodComponent(0, 0, true),
             new ConsumableComponent(32, UseAction.DRINK,
                     ModSounds.BLOOD_DRINK, false, List.of())));
+
+    Item BLOOD_KNIFE = register("blood_knife", BloodWeapon::new, new Item.Settings().maxCount(1));
+
+    Item OBLITERATION_RAY = register("obliteration_ray", ObliterationRayItem::new, new Item.Settings().maxCount(1));
 
     static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Vascular.id(name));
@@ -70,8 +69,8 @@ public interface ModItems {
                     eh.set(ModDataComponents.CASSETTE, ModSounds.EVENT_HORIZON.value());
                     entries.add(eh);
 
-                    ItemStack twlr = CASSETTE.getDefaultStack();
-                    twlr.set(ModDataComponents.CASSETTE, ModSounds.THE_WORLD_LOOKS_RED.value());
+                    ItemStack twlr = SHOPPING_CART.getDefaultStack();
+                    twlr.set(ModDataComponents.CASSETTE, ModSounds.SHOPPING_CART.value());
                     entries.add(twlr);
                 }).build());
 

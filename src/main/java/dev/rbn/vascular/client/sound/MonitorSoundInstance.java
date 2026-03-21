@@ -70,6 +70,6 @@ public class MonitorSoundInstance extends MovingSoundInstance {
         float fade = 1.0f - (float)(distance / 10);
         fade = MathHelper.clamp(fade * fade, 0.0f, 1.0f);
 
-        this.volume = fade * 0.1F;
+        this.volume = fade * 0.5F;
     }
 }

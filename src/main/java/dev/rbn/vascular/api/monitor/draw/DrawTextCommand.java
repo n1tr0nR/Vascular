@@ -1,16 +1,11 @@
 package dev.rbn.vascular.api.monitor.draw;
 
-import dev.rbn.vascular.Vascular;
 import dev.rbn.vascular.api.monitor.MonitorContext;
-import dev.rbn.vascular.api.monitor.MonitorDrawCommand;
 import dev.rbn.vascular.api.monitor.MonitorRenderContext;
 import dev.rbn.vascular.content.block.MonitorBlock;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.render.LightmapTextureManager;
-import net.minecraft.client.render.OverlayTexture;
-import net.minecraft.client.render.RenderLayers;
-import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.block.entity.state.BlockEntityRenderState;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.Text;

@@ -1,0 +1,41 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "vascular:item/gui/obliteration_ray"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [23, 90, 0],
+			"translation": [0, 2.5, 0]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [23, -90, 0],
+			"translation": [0, 2.5, 0]
+		},
+		"firstperson_righthand": {
+			"rotation": [89.07, 85.22, -137.42],
+			"translation": [-0.75, 2.5, 0.75]
+		},
+		"firstperson_lefthand": {
+			"rotation": [89.07, -85.22, 137.42],
+			"translation": [-0.75, 2.5, 0.75]
+		},
+		"ground": {
+			"translation": [0, 2, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"head": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 13, 7]
+		},
+		"fixed": {
+			"rotation": [0, -180, 0]
+		},
+		"on_shelf": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 0, -3.5]
+		}
+	}
+}

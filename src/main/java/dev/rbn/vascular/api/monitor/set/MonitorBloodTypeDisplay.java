@@ -1,13 +1,10 @@
 package dev.rbn.vascular.api.monitor.set;
 
 import dev.rbn.vascular.Vascular;
-import dev.rbn.vascular.api.BloodTypeEntityRegistry;
-import dev.rbn.vascular.api.VascularBloodTypes;
-import dev.rbn.vascular.api.VascularGeneTypes;
+import dev.rbn.vascular.init.VascularGeneTypes;
 import dev.rbn.vascular.api.blood_types.set.HumanBloodType;
 import dev.rbn.vascular.api.monitor.MonitorContext;
 import dev.rbn.vascular.api.monitor.MonitorDisplay;
-import dev.rbn.vascular.api.monitor.MonitorRenderContext;
 import dev.rbn.vascular.content.data.PatientCardComponent;
 import dev.rbn.vascular.init.ModDataComponents;
 import net.minecraft.client.MinecraftClient;

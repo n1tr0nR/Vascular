@@ -1,5 +1,7 @@
 package dev.rbn.vascular.api.monitor;
 
+import dev.rbn.vascular.api.monitor.draw.MonitorDrawCommand;
+
 import java.util.Comparator;
 import java.util.List;
 

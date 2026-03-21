@@ -2,14 +2,12 @@ package dev.rbn.vascular.api.genes.set;
 
 import dev.rbn.vascular.Vascular;
 import dev.rbn.vascular.api.blood_types.BloodType;
-import dev.rbn.vascular.api.blood_types.set.RotBloodType;
 import dev.rbn.vascular.api.genes.Gene;
 import dev.rbn.vascular.content.data.BloodBagComponent;
 import dev.rbn.vascular.init.ModEffects;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 
 public class HumanGene extends Gene {

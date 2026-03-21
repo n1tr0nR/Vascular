@@ -6,6 +6,7 @@
 84d6be11188e592c523ca97374e389bc7bad2fe9 assets/vascular/items/blood.json
 f2e62b517983ecbec2fa7112c8680fc0bb43c921 assets/vascular/items/blood_bag.json
 49e0a40e919b96d82b74d06edf4c08af5fd1c1cd assets/vascular/items/blood_block.json
+4c356773b721c52a20251bb731d9fdf50da8e13f assets/vascular/items/blood_knife.json
 f6b825beb944c5e920e707212c64016ebaab3788 assets/vascular/items/cassette.json
 618359fb93e6a269a754f1fda328f7babc4eff51 assets/vascular/items/golden_blood_block.json
 b381bdb8ab4e1735893cce75d15f4530c7103d8a assets/vascular/items/golden_gut_block.json
@@ -22,6 +23,7 @@ a7f190185d593e45d8b937490173dac9e5157fb9 assets/vascular/models/item/blood.json
 fa687a6264217cbdab2ffc8f877622e12f2539be assets/vascular/models/item/blood_bag.json
 b2bb89b2621c0be677a8a9ec9096686706feebed assets/vascular/models/item/blood_bag_ichor.json
 3fde3f28f49cb19046ffa5d5eb6c81876e8ec9f0 assets/vascular/models/item/blood_bag_rot.json
+42c8d12d6d9bfc265a45a3c9c6ae06ed0e0ce9ef assets/vascular/models/item/blood_knife.json
 ddd4dfdbd311d6fbc952a9a867c763c8977b25d5 assets/vascular/models/item/cassette.json
 4d3d9feb7a6a4e380887d5c41dd0a944c7f1964b assets/vascular/models/item/ichor.json
 b2ed6c7b34b96c6666b31d1260c718f2e672ee11 assets/vascular/models/item/patient_card.json

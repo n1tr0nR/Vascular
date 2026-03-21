@@ -3,6 +3,7 @@ package dev.rbn.vascular.api.monitor;
 import dev.rbn.vascular.api.monitor.draw.DrawTextCommand;
 import dev.rbn.vascular.api.monitor.draw.DrawTextureCommand;
 import dev.rbn.vascular.api.monitor.draw.FillCommand;
+import dev.rbn.vascular.api.monitor.draw.MonitorDrawCommand;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.joml.Vector2i;
